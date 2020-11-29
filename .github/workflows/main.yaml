@@ -9,12 +9,11 @@ jobs:
     name: Build and Deploy
     runs-on: ubuntu-latest
     steps:
+      - {name: Checkout Repo, uses: actions/checkout@v2}
       - {name: Print Structure, run: 'ls'}
       - {name: Print Structure, run: 'pwd'}
       - {name: NPM Version, run: 'npm --version'}
       - {name: Node Version, run: 'node --version'}
       - {name: Yarn Version, run: 'yarn --version'}
-      - {name: TEST, run: 'cd ..'}
-      - {name: Test2, run: 'ls' }
-      # - {name: Install Dependencies, run: 'yarn install'}
-      # - {name: Build and Deploy, run: 'yarn run deploy'}
+      - {name: Install Dependencies, run: 'yarn install'}
+      - {name: Build and Deploy, run: 'yarn run deploy'}
