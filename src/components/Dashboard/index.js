@@ -23,16 +23,14 @@ const Dashboard = (props) => {
 
     const { temperature, wireless, areas, areaList } = state;
 
-    console.log("Dashboard Rerender")
-
     return (<Layout style={{height:"100vh"}}>
         <Header className="header">
             <div className="logo" />
             <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
-                <Menu.Item onClick={() => console.log("Area DAta")} key="1" icon={<DashboardOutlined />}>
+                <Menu.Item key="1" icon={<DashboardOutlined />}>
                     <Link to="/area">Area Data</Link>
                 </Menu.Item>
-                <Menu.Item onClick={() => console.log("Live Data")} key="2" icon={<BarChartOutlined />}>
+                <Menu.Item key="2" icon={<BarChartOutlined />}>
                     <Link to="/live">Live Data</Link>
                 </Menu.Item>
             </Menu>

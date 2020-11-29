@@ -25,7 +25,6 @@ const checkTime = (timestamp) => {
     const time = new Date(timestamp);
     let diff = (now.getTime() - time.getTime())/1000; 
     diff /= 60; 
-    console.log("Minutes difference:", Math.abs(Math.round(diff)))
     return (Math.abs(Math.round(diff)) <= 60)
 }
 
