@@ -14,5 +14,7 @@ jobs:
       - {name: NPM Version, run: 'npm --version'}
       - {name: Node Version, run: 'node --version'}
       - {name: Yarn Version, run: 'yarn --version'}
-      - {name: Install Dependencies, run: 'yarn install'}
-      - {name: Build and Deploy, run: 'yarn run deploy'}
+      - {name: TEST, run: 'cd ..'}
+      - {name: Test2, run: 'ls' }
+      # - {name: Install Dependencies, run: 'yarn install'}
+      # - {name: Build and Deploy, run: 'yarn run deploy'}
