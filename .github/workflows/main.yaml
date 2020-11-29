@@ -9,4 +9,5 @@ jobs:
     name: Build and Deploy
     runs-on: ubuntu-latest
     steps:
-      - {name: Auto Deploy, run: 'yarn run deploy'}
+      - {name: Print Structure, run: 'ls'}
+      - {name: Print Structure, run: 'pwd'}
