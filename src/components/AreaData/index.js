@@ -21,12 +21,12 @@ const AreaData = (props) => {
         <Sider
             breakpoint="lg"
             collapsedWidth="0"
-            onBreakpoint={broken => {
-                console.log(broken)
-            }}
-            onCollapse={(collapsed, type) => {
-                console.log(collapsed, type);
-            }}
+            // onBreakpoint={broken => {
+            //     console.log("HELLO", broken)
+            // }}
+            // onCollapse={(collapsed, type) => {
+            //     console.log("HELLOOOOO", collapsed, type);
+            // }}
         >
             <Menu
                 mode="inline"

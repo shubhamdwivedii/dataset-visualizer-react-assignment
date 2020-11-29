@@ -15,13 +15,15 @@ const Dashboard = (props) => {
         dispatch({ type: "NEXT_POLL" });
         const interval = setInterval(() => {
             dispatch({ type: "NEXT_POLL" })
-        }, 2000);
+        }, 10000);
         return () => {
             clearInterval(interval);
         }
     }, [dispatch])
 
     const { temperature, wireless, areas, areaList } = state;
+
+    console.log("Dashboard Rerender")
 
     return (<Layout style={{height:"100vh"}}>
         <Header className="header">
