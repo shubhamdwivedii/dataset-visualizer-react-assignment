@@ -1,13 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import TempGauge from "../TempGauge";
+import React from 'react';
 import AreaInfo from "../AreaInfo"; 
 import AreaAll from "../AreaAll";
 import { HomeOutlined } from "@ant-design/icons";
-import { union, isEqual } from "lodash";
 import { useHistory, Route } from "react-router-dom";
 import { Layout, Menu } from 'antd';
 const { SubMenu } = Menu; 
-const {Content, Sider } = Layout; 
+const { Sider } = Layout; 
 
 
 const AreaData = (props) => {

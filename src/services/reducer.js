@@ -9,15 +9,15 @@ export const initialState = {
     areaList: [],
 }
 
-const sorter = (a, b) => {
-    if (a.device_display_name < b.device_display_name) {
-        return -1; 
-    } 
-    if (a.device_display_name > b.device_display_name) {
-        return 1; 
-    }
-    return 0; 
-}
+// const sorter = (a, b) => {
+//     if (a.device_display_name < b.device_display_name) {
+//         return -1; 
+//     } 
+//     if (a.device_display_name > b.device_display_name) {
+//         return 1; 
+//     }
+//     return 0; 
+// }
 
 export const reducer = (state, action) => {
     if (action.type === "NEXT_POLL") {
