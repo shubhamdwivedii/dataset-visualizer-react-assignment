@@ -8,7 +8,7 @@ const { Content } = Layout;
 
 const AreaInfo = (props) => {
     const { areas, match: { params } } = props;
-    const [area, setArea] = useState(null)
+    const [area, setArea] = useState(null);
     const areaId = params.id;
 
     useEffect(() => {

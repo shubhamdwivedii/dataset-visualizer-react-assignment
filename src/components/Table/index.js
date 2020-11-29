@@ -8,15 +8,11 @@ const columns = [
         dataIndex: 'device_display_name',
         key: 'device_display_name',
     },
-    // {
-    //     title: 'Type',
-    //     dataIndex: 'device_type',
-    //     key: 'device_type',
-    // },
     {
-        title: 'Temprature',
+        title: 'Temperature',
         dataIndex: 'reading',
         key: 'reading',
+        render: (temp) => `${Math.round(temp * 100)/100}° C`
     },
     {
         title: 'Time',
