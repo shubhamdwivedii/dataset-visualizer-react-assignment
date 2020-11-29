@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/dataset-visualizer-react-assignment/static/css/main.d4c384cf.chunk.css",
-    "main.js": "/dataset-visualizer-react-assignment/static/js/main.64f773c5.chunk.js",
-    "main.js.map": "/dataset-visualizer-react-assignment/static/js/main.64f773c5.chunk.js.map",
+    "main.js": "/dataset-visualizer-react-assignment/static/js/main.54ce2a71.chunk.js",
+    "main.js.map": "/dataset-visualizer-react-assignment/static/js/main.54ce2a71.chunk.js.map",
     "runtime-main.js": "/dataset-visualizer-react-assignment/static/js/runtime-main.f2e0e888.js",
     "runtime-main.js.map": "/dataset-visualizer-react-assignment/static/js/runtime-main.f2e0e888.js.map",
     "static/css/2.325df4de.chunk.css": "/dataset-visualizer-react-assignment/static/css/2.325df4de.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.325df4de.chunk.css",
     "static/js/2.2fd460d3.chunk.js",
     "static/css/main.d4c384cf.chunk.css",
-    "static/js/main.64f773c5.chunk.js"
+    "static/js/main.54ce2a71.chunk.js"
   ]
 }
