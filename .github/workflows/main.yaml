@@ -16,4 +16,6 @@ jobs:
       - {name: Node Version, run: 'node --version'}
       - {name: Yarn Version, run: 'yarn --version'}
       - {name: Install Dependencies, run: 'yarn install'}
+      - {name: Git Config Email, run: 'git config user.email "shubham00d@gmail.com"'}
+      - {name: Git Config Name, run: 'git config user.name "shubhamdwivedii"'}
       - {name: Build and Deploy, run: 'yarn run deploy'}
