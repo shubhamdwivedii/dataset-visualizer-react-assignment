@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/dataset-visualizer-react-assignment/static/css/main.d4c384cf.chunk.css",
+    "main.js": "/dataset-visualizer-react-assignment/static/js/main.64f773c5.chunk.js",
+    "main.js.map": "/dataset-visualizer-react-assignment/static/js/main.64f773c5.chunk.js.map",
+    "runtime-main.js": "/dataset-visualizer-react-assignment/static/js/runtime-main.f2e0e888.js",
+    "runtime-main.js.map": "/dataset-visualizer-react-assignment/static/js/runtime-main.f2e0e888.js.map",
+    "static/css/2.325df4de.chunk.css": "/dataset-visualizer-react-assignment/static/css/2.325df4de.chunk.css",
+    "static/js/2.2fd460d3.chunk.js": "/dataset-visualizer-react-assignment/static/js/2.2fd460d3.chunk.js",
+    "static/js/2.2fd460d3.chunk.js.map": "/dataset-visualizer-react-assignment/static/js/2.2fd460d3.chunk.js.map",
+    "static/js/3.e69a0509.chunk.js": "/dataset-visualizer-react-assignment/static/js/3.e69a0509.chunk.js",
+    "static/js/3.e69a0509.chunk.js.map": "/dataset-visualizer-react-assignment/static/js/3.e69a0509.chunk.js.map",
+    "index.html": "/dataset-visualizer-react-assignment/index.html",
+    "static/css/2.325df4de.chunk.css.map": "/dataset-visualizer-react-assignment/static/css/2.325df4de.chunk.css.map",
+    "static/css/main.d4c384cf.chunk.css.map": "/dataset-visualizer-react-assignment/static/css/main.d4c384cf.chunk.css.map",
+    "static/js/2.2fd460d3.chunk.js.LICENSE.txt": "/dataset-visualizer-react-assignment/static/js/2.2fd460d3.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f2e0e888.js",
+    "static/css/2.325df4de.chunk.css",
+    "static/js/2.2fd460d3.chunk.js",
+    "static/css/main.d4c384cf.chunk.css",
+    "static/js/main.64f773c5.chunk.js"
+  ]
+}
