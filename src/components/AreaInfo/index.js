@@ -39,9 +39,9 @@ const AreaInfo = (props) => {
     return (<Content style={{ margin: '24px 16px 0' }}>
         <div className="area-info">
             <div className="top-section">
-                {area.temp_avg && <TempGauge value={area.temp_avg} title={"Temperature"} />}
+                {area.temp_avg ? (<TempGauge value={area.temp_avg} title={"Temperature"} />) : null}
                 <span className="area-title">{area.name}</span>
-                {area.wrlss_avg && <TempGauge value={area.wrlss_avg} title={"Wireless"} />}
+                {area.wrlss_avg ? <TempGauge value={area.wrlss_avg} title={"Wireless"} /> : null}
             </div>
             <div className="bottom-section">
                 <TempChart data={chartData} title={area.name} />
