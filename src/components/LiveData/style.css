@@ -1,0 +1,17 @@
+
+.live-data {
+    width: 100%; 
+    display: flex;
+    /* background-color: red;; */
+    flex-direction: row; 
+}
+
+
+.bar-chart {
+    width: 50%;
+    /* height: 100%;   */
+}
+
+.data-table {
+    width: 50%; 
+}

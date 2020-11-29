@@ -1,5 +1,6 @@
 import React from 'react'
 import { Table } from "antd";
+import moment from "moment"; 
 
 const columns = [
     {
@@ -21,6 +22,7 @@ const columns = [
         title: 'Time',
         dataIndex: 'time',
         key: 'time',
+        render: (time) => moment(time).format('MMMM Do YYYY, h:mm:ss a')
     }
 ];
 

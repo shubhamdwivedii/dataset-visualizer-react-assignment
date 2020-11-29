@@ -1,11 +1,12 @@
 import dataClient from "./data";
-import { uniqBy, map, union } from "lodash";
+import moment from "moment"; 
+import { uniqBy, map, union, isEqual } from "lodash";
 
 export const initialState = {
     temperature: [],
     wireless: [],  
     areas: [],
-    areaNames: [],
+    areaList: [],
 }
 
 const sorter = (a, b) => {
@@ -29,27 +30,39 @@ export const reducer = (state, action) => {
         
         areas.forEach(area => {
             const areaTempData = temperature.filter(tmp => tmp.device_display_name === area);
+            const areaWrlssData = wireless.filter(wrl => wrl.device_display_name === area);
             if (!areaTempData.length) {
                 return; 
             }
             const totalTemp = areaTempData.reduce((ac, cv) => ac + cv.reading, 0);
             const avgTemp = totalTemp/areaTempData.length; 
+
+            const totalWrlss = areaWrlssData.reduce((ac, cv) => ac + cv.reading, 0);
+            const avgWrlss = totalWrlss/areaWrlssData.length; 
+
             // later filter out by last 1 hour data only
             const areaData = currentAreas.find(areadata => areadata.name === area);
             if (areaData) {
                 areaData.temp_avg = avgTemp; // later calculate agains existing
+                areaData.wrlss_avg = avgWrlss; // later calculate agains existing
+                areaData.temp_data = areaData.temp_data.concat(areaTempData.map(atd => ({ reading: atd.reading, time: moment(atd.time).format('MMMM Do YYYY, h:mm:ss a'), type: "Temperature" })))
+                areaData.wrlss_data = areaData.wrlss_data.concat(areaWrlssData.map(awd => ({ reading: awd.reading, time: moment(awd.time).format('MMMM Do YYYY, h:mm:ss a'), type: "Wireless" })))
             } else {
                 currentAreas.push({
                     name: area, 
                     temp_avg: avgTemp, 
+                    temp_data: areaTempData.map(atd => ({ reading: atd.reading, time: moment(atd.time).format('MMMM Do YYYY, h:mm:ss a'), type: "Temperature" })), // last 1 hour only
+                    wrlss_data: areaWrlssData.map(awd => ({ reading: awd.reading, time: moment(awd.time).format('MMMM Do YYYY, h:mm:ss a'), type: "Wireless" })),
                 })
             }
         });
 
+        const updatedAreaList = union(state.areaList, areas);
         return {
+            ...state, 
             wireless: wireless, //.sort(sorter), 
             temperature: temperature, //.sort(sorter),
-            // areaNames: union(state.areas, areas).sort(), 
+            ...(!isEqual(state.areaList, updatedAreaList) && { areaList: updatedAreaList.sort() }),
             areas: currentAreas, 
         };
     } 
