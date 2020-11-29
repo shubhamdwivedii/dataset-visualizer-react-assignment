@@ -6,9 +6,6 @@ import "./styles.css";
 
 const { Content } = Layout;
 
-
-
-
 const AreaInfo = (props) => {
     const { areas, match: { params } } = props;
     const [area, setArea] = useState(null)
@@ -16,13 +13,11 @@ const AreaInfo = (props) => {
 
     useEffect(() => {
         const areaData = areas.find(area => area.name.split(' ').join('_') === areaId);
-        if (areaData) {
-            setArea(areaData);
-        }
+        setArea(areaData)
     }, [areaId, areas, setArea])
 
     if (!area) {
-        return <span className="no-data">No Data Available For this area</span>
+        return <span className="no-data">No data available for this area yet ({areaId})</span>
     }
 
     const chartData = [...area.wrlss_data, ...area.temp_data].sort((a,b) => {
